@@ -8,7 +8,7 @@
 
 
   <!-- fetch Bithollow -->
-  <project name="build"/>
+  <project name="firmware"/>
   <project name="config"/>
   <project name="tools"/>
   <project name="linux"/>
