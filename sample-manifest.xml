@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="origin" fetch="https://github.com/bithollow/linux/BALBABALA"/>
+
+  <default revision="rpi-linux-dev"
+          remote="origin" />
+
+
+  <!-- fetch Bithollow -->
+  <project name="build"/>
+  <project name="config"/>
+  <project name="tools"/>
+  <project name="linux"/>
+  <project name="ardupolit"/>
+  <project name="droneplanner"/>
+  <project name="qtgroundstation"/>
+  <project name="test"/>
+
+</manifest>
