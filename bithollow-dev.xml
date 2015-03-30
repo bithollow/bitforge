@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="origin" fetch="https://github.com/bithollow/"/>
-  <!-- default revision="rpi-linux-dev" remote="origin" -->
+  <default remote="origin">
 
   <!-- fetch Bithollow -->
   <project name="firmware" revision="master"/>
