@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="origin" fetch="https://github.com/bithollow/linux/BALBABALA"/>
-
-  <default revision="rpi-linux-dev"
-          remote="origin" />
-
+  <remote  name="origin" fetch="https://github.com/bithollow/"/>
+  <!-- default revision="rpi-linux-dev" remote="origin" -->
 
   <!-- fetch Bithollow -->
-  <project name="firmware"/>
-  <project name="config"/>
-  <project name="tools"/>
-  <project name="linux"/>
-  <project name="ardupolit"/>
-  <project name="droneplanner"/>
-  <project name="qtgroundstation"/>
-  <project name="test"/>
-
+  <project name="firmware" revision="master"/>
+  <project name="tools" revision="master"/>
+  <project name="linux" revision="rpi-3.18.y-preempt-rt-3.18.9"/>
+  <project name="ardupilot" revision="ArduPlane-release"/>
+  <!-- project name="droneplanner" -->
+  <!-- project name="qtgroundstation" -->
+  <!-- project name="test" -->
 </manifest>
