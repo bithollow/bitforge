@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="origin" fetch="https://github.com/bithollow/"/>
-  <default remote="origin">
+  <default remote="origin"/>
 
   <!-- fetch Bithollow -->
   <project name="firmware" revision="master"/>
