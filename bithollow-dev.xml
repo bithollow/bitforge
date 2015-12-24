@@ -9,7 +9,7 @@
   <project name="tools" revision="master"/>
   <project name="linux" revision="rpi-3.18.y-preempt-rt-3.18.9"/>
   <project name="ardupilot" revision="ArduPlane-release-BH-develop"/>
-  <project name="demo" revision="master">
+  <project name="BH" revision="master">
   <!-- project name="droneplanner" -->
   <!-- project name="qtgroundstation" -->
   <!-- project name="test" -->
