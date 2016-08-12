@@ -1,2 +1,2 @@
-# manifests
-reposistory for managing repo manifests
+# bithollow-dev
+managing bithollow repositories
