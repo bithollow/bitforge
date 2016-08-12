@@ -1,2 +1,2 @@
-# bithollow-dev
-managing bithollow repositories
+# bitforge
+create binaries from bithollow repositories
