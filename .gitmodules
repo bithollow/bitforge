@@ -1,0 +1,15 @@
+[submodule "externals/tools"]
+	path = externals/tools
+	url = https://github.com/raspberrypi/tools.git
+[submodule "ardupilot"]
+	path = ardupilot
+	url = https://github.com/bithollow/ardupilot.git
+[submodule "bitburger"]
+	path = bitburger
+	url = https://github.com/bithollow/bitburger.git
+[submodule "externals/firmware"]
+	path = externals/firmware
+	url = https://github.com/raspberrypi/firmware.git
+[submodule "linux"]
+	path = linux
+	url = https://github.com/bithollow/linux.git
