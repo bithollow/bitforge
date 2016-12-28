@@ -13,3 +13,6 @@
 [submodule "linux"]
 	path = linux
 	url = https://github.com/bithollow/linux.git
+[submodule "raspap-webgui"]
+	path = raspap-webgui
+	url = https://github.com/bithollow/raspap-webgui.git
