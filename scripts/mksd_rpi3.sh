@@ -6,7 +6,7 @@ export LANG=C
 
 LOOP_DEV=loop0
 IMG_SIZE=6979321856  #6.5GB
-KERNEL_VER=4.5.6
+KERNEL_VER=4.6.5
 RT_VER=preempt-rt9
 DEVICE_TREE_BLOB=bcm2710-rpi-3-b.dtb
 PATH_LINUX=../linux
