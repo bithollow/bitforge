@@ -155,7 +155,7 @@ Description=ArduPilot on BH
 
 [Service]
 Type=idle
-ExecStart=/sbin/ardupilot -A /dev/ttyAMA0 -C udp:10.0.0.2:14550 2&>1 > /var/log/ardupilot.log
+ExecStart=/sbin/ardupilot -A /dev/ttyAMA0 -C udp:10.0.0.2:14550 2>&1 > /var/log/ardupilot.log
 Restart=on-failure
 
 [Install]
