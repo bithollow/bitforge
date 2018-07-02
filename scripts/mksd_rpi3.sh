@@ -117,7 +117,7 @@ sudo mount -t tmpfs tmpfs mnt/root/tmp
 sudo cp -a $PATH_RASPAP/raspap-webgui mnt/root/tmp/
 sudo -E chroot mnt/root apt-get update
 sudo -E chroot mnt/root apt-get install bluez -y
-sudo -E chroot mnt/root apt-get install lighttpd php5-cgi hostapd dnsmasq dhcpcd5 wireless-tools -y
+sudo -E chroot mnt/root apt-get install lighttpd php-cgi hostapd dnsmasq dhcpcd5 wireless-tools -y
 sudo -E chroot mnt/root apt-get clean
 sudo chroot mnt/root bash /tmp/raspap-webgui/installers/common.sh
 sudo chroot mnt/root rm -rf /usr/sbin/policy-rc.d
@@ -126,7 +126,6 @@ sudo umount mnt/root/dev/pts
 sudo umount mnt/root/tmp
 
 # enable hwclockfirst.service for ds1339
-sudo rm mnt/root/lib/systemd/system/hwclockfirst.service
 sudo sh -c 'cat > mnt/root/lib/systemd/system/hwclockfirst.service << EOF
 [Unit]
 Description=Synchronise Hardware Clock from System Clock
