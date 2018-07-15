@@ -4,7 +4,7 @@ export LANGUAGE=C
 export LC_ALL=C
 export LANG=C
 
-LOOP_DEV=loop0
+LOOP_DEV=loop2
 IMG_SIZE=6979321856  #6.5GB
 KERNEL_VER=4.6.5
 RT_VER=preempt-rt9
@@ -154,7 +154,7 @@ Description=ArduPilot on BH
 
 [Service]
 Type=idle
-ExecStart=/sbin/ardupilot -A /dev/ttyAMA0 -C udp:10.0.0.2:14550 2>&1 > /var/log/ardupilot.log
+ExecStart=/sbin/ardupilot -A /dev/ttyAMA0 -C udp:10.0.0.255:14550:bcast 2>&1 > /var/log/ardupilot.log
 Restart=on-failure
 
 [Install]
@@ -163,6 +163,11 @@ EOF
 '
 sudo chroot mnt/root ln /lib/systemd/system/ardupilot.service /etc/systemd/system/multi-user.target.wants
 sudo sh -c 'echo i2c-dev >> mnt/root/etc/modules'
+
+# disable non-used services
+# sudo chroot mnt/root systemctl disable getty@tty1.service
+# sudo chroot mnt/root systemctl disable rsyslog.service
+# sudo chroot mnt/root systemctl disable syslog.service
 
 if [ -e mnt/root/usr/bin/qemu-arm-static ]; then
     sudo rm -rf mnt/root/usr/bin/qemu-arm-static
