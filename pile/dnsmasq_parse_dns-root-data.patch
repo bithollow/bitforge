@@ -1,0 +1,4 @@
+114c114
+<    DNSMASQ_OPTS="$DNSMASQ_OPTS `sed -e s/". IN DS "/--trust-anchor=.,/ -e s/" "/,/g $ROOT_DS | tr '\n' ' '`" 
+---
+>    DNSMASQ_OPTS="$DNSMASQ_OPTS `sed -e s/".*\sIN\sDS\s"/--trust-anchor=.,/ -e s/" "/,/g $ROOT_DS | tr '\n' ' '`" 

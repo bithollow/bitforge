@@ -117,8 +117,9 @@ sudo mount -t tmpfs tmpfs mnt/root/tmp
 sudo cp -a $PATH_RASPAP/raspap-webgui mnt/root/tmp/
 sudo -E chroot mnt/root apt-get update
 sudo -E chroot mnt/root apt-get install bluez -y
-sudo -E chroot mnt/root apt-get install lighttpd php-cgi hostapd dnsmasq dhcpcd5 wireless-tools -y
+sudo -E chroot mnt/root apt-get install lighttpd php5-cgi hostapd dnsmasq dhcpcd5 wireless-tools -y
 sudo -E chroot mnt/root apt-get clean
+sudo patch -p1 mnt/root/etc/init.d/dnsmasq $PATH_PILE/dnsmasq_parse_dns-root-data.patch
 sudo chroot mnt/root bash /tmp/raspap-webgui/installers/common.sh
 sudo chroot mnt/root rm -rf /usr/sbin/policy-rc.d
 sudo umount mnt/root/proc
@@ -154,7 +155,7 @@ Description=ArduPilot on BH
 
 [Service]
 Type=idle
-ExecStart=/sbin/ardupilot -A /dev/ttyAMA0 -C udp:10.0.0.255:14550:bcast 2>&1 > /var/log/ardupilot.log
+ExecStart=/sbin/ardupilot -C udp:10.0.0.255:14550:bcast 2>&1 > /var/log/ardupilot.log
 Restart=on-failure
 
 [Install]
