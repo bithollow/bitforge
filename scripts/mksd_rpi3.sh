@@ -127,6 +127,10 @@ sudo umount mnt/root/dev/pts
 sudo umount mnt/root/tmp
 
 # enable hwclockfirst.service for ds1339
+if [ -e mnt/root/lib/systemd/system/hwclockfirst.service ]; then
+    sudo rm -rf mnt/root/lib/systemd/system/hwclockfirst.service
+fi
+
 sudo sh -c 'cat > mnt/root/lib/systemd/system/hwclockfirst.service << EOF
 [Unit]
 Description=Synchronise Hardware Clock from System Clock
