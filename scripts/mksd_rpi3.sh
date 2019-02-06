@@ -57,6 +57,7 @@ dtparam=spi=on
 enable_uart=1
 dtoverlay=pi3-miniuart-bt
 dtoverlay=i2c-rtc,ds1339
+dtoverlay=spi0-3cs
 EOF
 '
 
